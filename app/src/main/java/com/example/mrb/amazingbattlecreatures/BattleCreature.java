@@ -53,7 +53,7 @@ public class BattleCreature
         }
         else
         {
-            blnHasWon = false;
+            blnHasWon = true;
         }
     }
 
@@ -68,7 +68,7 @@ public class BattleCreature
             blnHasWon = false;
             strLastAction = strName + " is defeated.";
         }
-        else if (intNetDamage > 0)
+        else if (intNetDamage >= 0)
         {
             intHitPoints = intHitPoints - intNetDamage;
             strLastAction = strName + " has taken " + intNetDamage + " damage.";
