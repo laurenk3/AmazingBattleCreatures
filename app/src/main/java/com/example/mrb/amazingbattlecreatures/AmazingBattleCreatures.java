@@ -30,8 +30,8 @@ public class AmazingBattleCreatures extends AppCompatActivity {
         BattleCreature bcTwo;
 
         // Thanks to Mr Hardman for checking the original numbers! These ones work better.
-        bcOne = new BattleCreature("Mondoise", 200, 10, 15);
-        bcTwo = new BattleCreature("Tuesachu", 200, 25, 15);
+        bcOne = new BattleCreature("Mondoise", 100, 9, 32);
+        bcTwo = new BattleCreature("Tuesachu", 100, 12, 24);
 
         bcOne.restore();
         bcTwo.restore();
@@ -41,7 +41,7 @@ public class AmazingBattleCreatures extends AppCompatActivity {
         while(blnNoWinner)
         {
             // Thanks to Mr Hardman for the logic assist!
-            if((bcTwo.isDefeated() == true) && (bcOne.isDefeated() == true))
+            if((!bcTwo.isDefeated()) && (bcOne.isDefeated() == false))
             {
                 bcOne.attack(bcTwo);
                 txtvwBattleOutput.append(bcTwo.getLastAction());

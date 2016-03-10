@@ -34,7 +34,7 @@ public class BattleCreature
     {
         intHitPoints = intHitPointsMaster; // Reset Hit Points from Master
 
-        blnHasWon = false;
+        blnHasWon = true;
         blnIsDefeated = false;
 
         strLastAction = "";
@@ -53,7 +53,7 @@ public class BattleCreature
         }
         else
         {
-            blnHasWon = true;
+            blnHasWon = false;
         }
     }
 
