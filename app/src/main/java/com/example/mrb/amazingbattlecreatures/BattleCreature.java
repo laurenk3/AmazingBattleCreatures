@@ -13,6 +13,7 @@ public class BattleCreature
     private boolean blnIsDefeated;
     private boolean blnHasWon;
     private String strLastAction;
+    private String strAttackmessage;
 
     public BattleCreature(String strName_PARAM,
                                int intHitPoints_PARAM,
@@ -28,6 +29,7 @@ public class BattleCreature
         this.intOffenceRating = intOffenceRating_PARAM;
 
         this.strLastAction = new String("");
+        this.strAttackmessage = new String ("");
     }
 
     public void restore()
@@ -44,15 +46,19 @@ public class BattleCreature
     {
         if (!battcreatOpponent_PARAM.isDefeated())
         {
+            strAttackmessage = strName + " asdasdads ";
             battcreatOpponent_PARAM.defend(intOffenceRating);
+
         }
 
         if(battcreatOpponent_PARAM.isDefeated())
         {
+            strAttackmessage = strName + " asdasdads ";
             blnHasWon = true;
         }
         else
         {
+            strAttackmessage = strName + " asdasdads ";
             blnHasWon = false;
         }
     }
@@ -94,5 +100,7 @@ public class BattleCreature
     {
         return strLastAction;
     }
+
+    private String strAttackmessage() { return strAttackmessage; }
 
 }
